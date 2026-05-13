@@ -84,10 +84,10 @@
 
     <div class="componente contactor" id="contactor">
 
-        <div class="texto1">
-    
-            <h3>Contactor</h3>
-    
+        <h3 class="toggle">Contactor</h3>
+
+        <div class="contenido">
+        
             <p>
                 Un contactor es un dispositivo electromecánico de conmutación 
                 diseñado para abrir o cerrar circuitos 
@@ -98,17 +98,17 @@
                 circuito de control de baja corriente.
             </p>
 
+            <img src="imagenes/contactor.jpg" alt="Contactor" width="300">
+
         </div>
-    
-        <img src="imagenes/contactor.jpg" alt="Contactor" width="300">
-    
+        
     </div>
 
     <div class="componente disyuntor" id="disyuntor">
-    
-        <div class="texto2">
 
-            <h3>Disyuntor</h3>
+        <h3 class="toggle">Disyuntor</h3>
+
+        <div class="contenido">
     
             <p>
                 Un disyuntor (o interruptor magnetotérmico) es un dispositivo de seguridad eléctrica 
@@ -119,17 +119,17 @@
                 a las personas de fugas, el disyuntor protege la instalación.
             </p>
 
+            <img src="imagenes/disyuntor.jpg" alt="Disyuntor" width="300">
+
         </div>
     
-        <img src="imagenes/disyuntor.jpg" alt="Disyuntor" width="300">
-
     </div>
 
     <div class="componente rele" id="rele-temporizador">
 
-        <div class="texto3">
+        <h3 class="toggle">Relé temporizador</h3>
 
-            <h3>Relé temporizador</h3>
+        <div class="contenido">
     
             <p>
                 Un relé temporizador (o relé de tiempo) es un dispositivo electrónico o electromecánico 
@@ -139,17 +139,17 @@
                 Es fundamental en automatización industrial, motores, iluminación y temporización de procesos.
             </p>
 
-        </div>    
+            <img src="imagenes/timer.jpg" alt="Relé" width="300">
 
-        <img src="imagenes/timer.jpg" alt="Relé" width="300">
+        </div>    
 
     </div>
 
     <div class="componente botoneras" id="botoneras">
 
-        <div class="texto4">
+        <h3 class="toggle">Botoneras y señalizadores</h3>
 
-            <h3>Botoneras y señalizadores</h3>
+        <div class="contenido">
 
             <p>
                 Las botoneras y señalizadores son componentes esenciales en el control industrial
@@ -160,17 +160,17 @@
                 proporcionan retroalimentación visual o auditiva sobre el estado del sistema.
             </p>
 
+           <img src="imagenes/pulsadores.jpg" alt="Botoneras" width="300">
+
         </div>    
 
-        <img src="imagenes/pulsadores.jpg" alt="Botoneras" width="300">
-    
     </div>
 
     <div class="componente conductores" id="conductores">
 
-        <div class="texto5">
+        <h3 class="toggle">Conductores</h3>
 
-            <h3>Conductores</h3>
+        <div class="contenido">
 
             <p>
                 Los conductores eléctricos son materiales, principalmente metales como el cobre y el
@@ -179,28 +179,28 @@
                 del material, calibre y aislamiento es crucial para la seguridad y eficiencia, evitando 
                 caídas de voltaje.
             </p>
+    
+            <img src="imagenes/Conductor.png" alt="Conductores" width="300">
 
         </div>
-
-        <img src="imagenes/Conductor.png" alt="Conductores" width="300">
-    
+  
     </div>
 
     <div class="componente canaletas" id="canaletas">
 
-        <div class="texto6">
-            
-            <h3>Canaletas y riel din</h3>
+        <h3 class="toggle">Canaletas y riel din</h3>
 
+        <div class="contenido">
+            
             <p>
                 Las canaletas ranuradas y los rieles DIN son los elementos fundamentales para el montaje 
                 estructural, la organización del cableado y el soporte de componentes dentro de tableros 
                 eléctricos y gabinetes de automatización.
             </p>
+            
+            <img src="imagenes/canaleta.png" alt="Canaletas y riel din" width="300">
 
         </div>
-
-        <img src="imagenes/canaleta.png" alt="Canaletas y riel din" width="300">
 
     </div>
 
@@ -220,6 +220,14 @@
     </p>
 
 </footer>
+
+<div class="modal" id="modal">
+
+    <span class="cerrar">&times;</span>
+
+    <img class="modal-img" id="imagen-modal">
+
+</div>
 <script src="script.js"></script>
 </body>
 </html>
