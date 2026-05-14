@@ -19,9 +19,10 @@
 
 <div class="titulo" id="inicio"> 
 
-    <h1>Circuitos Eléctricos</h1>
+    <h1>Manual interactivo de tableros eléctricos industriales</h1>
+    <p class="subtitulo">Proyecto web educativo desarrollado con HTML, CSS y JavaScript</p>
 
-</div>    
+</div>
 
 <div class="contenido-superior">
 
@@ -76,32 +77,39 @@
 </div>
 
 <div class="lista" id="componentes">
-
+    
     <h2>Elementos que integran el tablero de comandos</h2>
 
     <ul>
-        <li><a href="#gabinete">Gabinete para panel electrico</a></li>
-        <li><a href="#disyuntor">Disyuntor</a></li>
+        <li><a href="#gabinete">Gabinete para panel eléctrico</a></li>
+        <li><a href="#disyuntor">Disyuntor termomagnético</a></li>
+        <li><a href="#diferencial">Interruptor diferencial</a></li>
         <li><a href="#fusible">Fusibles</a></li>
+        <li><a href="#spd">Protección contra sobretensión (SPD)</a></li>
         <li><a href="#contactor">Contactores</a></li>
+        <li><a href="#rele-termico">Relé térmico</a></li>
         <li><a href="#rele-temporizador">Relé temporizador</a></li>
         <li><a href="#rele-falta-fase">Relé falta de fase</a></li>
+        <li><a href="#rele-aux">Relés auxiliares</a></li>
+        <li><a href="#plc">PLC (Controlador lógico programable)</a></li>
+        <li><a href="#fuente-24v">Fuente de alimentación 24V DC</a></li>
         <li><a href="#botoneras">Botoneras y señalizadores</a></li>
+        <li><a href="#sensores">Sensores de campo</a></li>
         <li><a href="#conductores">Conductores</a></li>
         <li><a href="#bornera">Bornes de conexión</a></li>
-        <li><a href="#canaletas">canaletas y riel din</a></li>
+        <li><a href="#canaletas">Canaletas y riel DIN</a></li>
+        <li><a href="#barra-tierra">Barra de tierra (PE)</a></li>
     </ul>
 
 </div>
 
 <div class="grid-componentes">
 
+    <!-- 🔹 PROTECCIÓN -->
+
     <div class="componente gabinete" id="gabinete">
-
         <h3 class="toggle">gabinete</h3>
-
         <div class="contenido">
-
             <p>
                 Un gabinete para panel eléctrico (también conocido como cuadro, 
                 armario o tablero de distribución) es un contenedor diseñado específicamente 
@@ -110,40 +118,39 @@
                 por sí mismo, sino actuar como una barrera de protección frente a impactos, agua, 
                 polvo y accesos no autorizados.
             </p>
-
             <img src="imagenes/gabinete.webp" alt="Gabinete para comandos electricos" width="300">
-        
         </div>
-    
-    </div>        
+    </div>
 
     <div class="componente disyuntor" id="disyuntor">
-
         <h3 class="toggle">Disyuntor</h3>
-
         <div class="contenido">
-    
             <p>
                 Un disyuntor (o interruptor magnetotérmico) es un dispositivo de seguridad eléctrica 
-                diseñado para cortar 
-                automáticamente el flujo de corriente ante sobrecargas o cortocircuitos,
+                diseñado para cortar automáticamente el flujo de corriente ante sobrecargas o cortocircuitos,
                 protegiendo los cables y la instalación de incendios. 
                 A diferencia del interruptor diferencial, que protege 
                 a las personas de fugas, el disyuntor protege la instalación.
             </p>
-
             <img src="imagenes/disyuntor.jpg" alt="Disyuntor" width="300">
-
         </div>
-    
+    </div>
+
+    <div class="componente diferencial" id="diferencial">
+        <h3 class="toggle">Interruptor diferencial</h3>
+        <div class="contenido">
+            <p>
+                El interruptor diferencial protege a las personas contra contactos eléctricos indirectos,
+                detectando fugas de corriente hacia tierra y desconectando el circuito instantáneamente
+                para evitar electrocución.
+            </p>
+            <img src="imagenes/diferencial.jpg" alt="Interruptor diferencial" width="300">
+        </div>
     </div>
 
     <div class="componente fusible" id="fusible">
-        
         <h3 class="toggle">Fusibles</h3>
-        
         <div class="contenido">
-
             <p>
                 Un fusible es un componente de seguridad eléctrica diseñado para proteger los
                 circuitos contra sobrecorrientes y cortocircuitos. Su funcionamiento se basa en 
@@ -151,19 +158,26 @@
                 supera su límite seguro, interrumpiendo el flujo eléctrico por completo para evitar incendios
                 o daños graves en los equipos conectados.
             </p>
-
             <img src="imagenes/fusibles.png" alt="Fusibles" width="300">
-        
         </div>
-    
     </div>
 
-    <div class="componente contactor" id="contactor">
-
-        <h3 class="toggle">Contactor</h3>
-
+    <div class="componente spd" id="spd">
+        <h3 class="toggle">Protección contra sobretensión (SPD)</h3>
         <div class="contenido">
-        
+            <p>
+                El SPD protege los equipos eléctricos contra picos de tensión causados por rayos o variaciones
+                en la red eléctrica, desviando la energía excesiva hacia tierra.
+            </p>
+            <img src="imagenes/SPD.jpg" alt="SPD" width="300">
+        </div>
+    </div>
+
+    <!-- 🔹 CONTROL -->
+
+    <div class="componente contactor" id="contactor">
+        <h3 class="toggle">Contactor</h3>
+        <div class="contenido">
             <p>
                 Un contactor es un dispositivo electromecánico de conmutación 
                 diseñado para abrir o cerrar circuitos 
@@ -173,39 +187,38 @@
                 permitiendo gestionar grandes intensidades con un  
                 circuito de control de baja corriente.
             </p>
-
             <img src="imagenes/contactor.jpg" alt="Contactor" width="300">
-
         </div>
-        
     </div>
 
-    <div class="componente rele" id="rele-temporizador">
-
-        <h3 class="toggle">Relé temporizador</h3>
-
+    <div class="componente rele-termico" id="rele-termico">
+        <h3 class="toggle">Relé térmico</h3>
         <div class="contenido">
-    
+            <p>
+                El relé térmico es un dispositivo de protección utilizado principalmente en motores eléctricos
+                para evitar daños por sobrecarga prolongada. Actúa midiendo la corriente y desconectando el circuito
+                cuando detecta un exceso sostenido de consumo.
+            </p>
+            <img src="imagenes/rele-termico.jpg" alt="Relé térmico" width="300">
+        </div>
+    </div>
+
+    <div class="componente rele-temporizador" id="rele-temporizador">
+        <h3 class="toggle">Relé temporizador</h3>
+        <div class="contenido">
             <p>
                 Un relé temporizador (o relé de tiempo) es un dispositivo electrónico o electromecánico 
-                diseñado 
-                para abrir o cerrar contactos eléctricos tras un intervalo de tiempo programado, 
+                diseñado para abrir o cerrar contactos eléctricos tras un intervalo de tiempo programado, 
                 automatizando el control de cargas. 
                 Es fundamental en automatización industrial, motores, iluminación y temporización de procesos.
             </p>
-
-            <img src="imagenes/timer.jpg" alt="Relé" width="300">
-
-        </div>    
-
+            <img src="imagenes/timer.jpg" alt="Relé temporizador" width="300">
+        </div>
     </div>
 
     <div class="componente rele-falta-fase" id="rele-falta-fase">
-
         <h3 class="toggle">Relé falta de fase</h3>
-
         <div class="contenido">
-
             <p>
                 El relé falta de fase es un dispositivo electrónico de protección diseñado para monitorear 
                 redes eléctricas trifásicas. Su función principal es desactivar inmediatamente el circuito de
@@ -213,13 +226,47 @@
                 Esto evita que motores de inducción y maquinarias costosas operen de forma bidireccional 
                 o sufran sobrecalentamientos severos que quemen sus bobinados.
             </p>
-
             <img src="imagenes/Rele-falta-de-fase.jpg" alt="Relé falta de fase" width="300">
-            
         </div>
-    
     </div>
-        
+
+    <div class="componente rele-aux" id="rele-aux">
+        <h3 class="toggle">Relé auxiliar</h3>
+        <div class="contenido">
+            <p>
+                Los relés auxiliares son interruptores eléctricos automáticos diseñados para controlar múltiples
+                circuitos o multiplicar señales de baja potencia. Su función principal es actuar como interfaz para 
+                manejar corrientes más altas mediante una señal pequeña y segura, protegiendo los componentes de 
+                control directo.
+            </p>
+            <img src="imagenes/rele-aux.webp" alt="Relé auxiliar" width="300">
+        </div>
+    </div>
+
+    <!-- 🔹 AUTOMATIZACIÓN -->
+
+    <div class="componente plc" id="plc">
+        <h3 class="toggle">PLC (Controlador lógico programable)</h3>
+        <div class="contenido">
+            <p>
+                El PLC es el cerebro del sistema de automatización industrial. Permite controlar procesos
+                mediante programación lógica, reemplazando sistemas de relés tradicionales en aplicaciones modernas.
+            </p>
+            <img src="imagenes/plc.jpg" alt="PLC" width="300">
+        </div>
+    </div>
+
+    <div class="componente fuente-24v" id="fuente-24v">
+        <h3 class="toggle">Fuente de alimentación 24V DC</h3>
+        <div class="contenido">
+            <p>
+                La fuente de 24V DC convierte la tensión de red en corriente continua estable para alimentar
+                circuitos de control, PLCs, sensores y relés en tableros eléctricos.
+            </p>
+            <img src="imagenes/fuente-24v.webp" alt="Fuente 24V DC" width="300">
+        </div>
+    </div>
+
     <div class="componente botoneras" id="botoneras">
 
         <h3 class="toggle">Botoneras y señalizadores</h3>
@@ -237,16 +284,26 @@
 
            <img src="imagenes/pulsadores.jpg" alt="Botoneras" width="300">
 
-        </div>    
-
+        </div>
+    
     </div>
 
-    <div class="componente conductores" id="conductores">
-
-        <h3 class="toggle">Conductores</h3>
-
+    <div class="componente sensores" id="sensores">
+        <h3 class="toggle">Sensores de campo</h3>
         <div class="contenido">
+            <p>
+                Los sensores detectan variables físicas como posición, temperatura o presencia, enviando señales
+                al sistema de control para automatizar procesos industriales.
+            </p>
+            <img src="imagenes/sensor.jpg" alt="Sensores industriales" width="300">
+        </div>
+    </div>
 
+    <!-- 🔹 INSTALACIÓN -->
+
+    <div class="componente conductores" id="conductores">
+        <h3 class="toggle">Conductores</h3>
+        <div class="contenido">
             <p>
                 Los conductores eléctricos son materiales, principalmente metales como el cobre y el
                 aluminio, que permiten el flujo libre de electrones en un circuito. El cobre es el más
@@ -254,48 +311,44 @@
                 del material, calibre y aislamiento es crucial para la seguridad y eficiencia, evitando 
                 caídas de voltaje.
             </p>
-    
             <img src="imagenes/Conductor.png" alt="Conductores" width="300">
-
         </div>
-  
     </div>
 
     <div class="componente bornera" id="bornera">
-
         <h3 class="toggle">bornes de conexión</h3>
-
         <div class="contenido">
-
             <p>
                 Los bornes de conexión (o bornas eléctricas) son los elementos metálicos utilizados para 
                 unir cables eléctricos entre sí o conectarlos a un dispositivo de forma segura. 
                 Actúan como puntos de transición que garantizan el flujo óptimo de la corriente
                 eléctrica, eliminando la necesidad de realizar empalmes improvisados con cinta aislante.
             </p>
-
             <img src="imagenes/bornes.jpg" alt="Bornes de conexión" width="300">
-        
         </div>
-    
     </div>
 
     <div class="componente canaletas" id="canaletas">
-
-        <h3 class="toggle">Canaletas y riel din</h3>
-
+        <h3 class="toggle">Canaletas y riel DIN</h3>
         <div class="contenido">
-            
             <p>
                 Las canaletas ranuradas y los rieles DIN son los elementos fundamentales para el montaje 
                 estructural, la organización del cableado y el soporte de componentes dentro de tableros 
                 eléctricos y gabinetes de automatización.
             </p>
-            
             <img src="imagenes/canaleta.png" alt="Canaletas y riel din" width="300">
-
         </div>
+    </div>
 
+    <div class="componente barra-tierra" id="barra-tierra">
+        <h3 class="toggle">Barra de tierra (PE)</h3>
+        <div class="contenido">
+            <p>
+                La barra de tierra es un elemento de seguridad que conecta todas las masas metálicas del tablero
+                a tierra, protegiendo a personas y equipos ante fallas eléctricas.
+            </p>
+            <img src="imagenes/Barramento.png" alt="Barra de tierra" width="300">
+        </div>
     </div>
 
 </div>
