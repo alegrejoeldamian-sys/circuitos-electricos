@@ -2,12 +2,22 @@
 <html>
 <head>
     <title>Circuitos Eléctricos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
 </head>
 
 <body>
 
-<div class="titulo"> 
+    <nav class="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#fundamentos">Fundamentos</a>
+        <a href="#circuitos">Circuitos</a>
+        <a href="#componentes">Componentes</a>
+        <a href="#footer">Footer</a>
+    </nav>
+
+<div class="titulo" id="inicio"> 
 
     <h1>Circuitos Eléctricos</h1>
 
@@ -15,7 +25,7 @@
 
 <div class="contenido-superior">
 
-    <div class="fundamentos">
+    <div class="fundamentos" id="fundamentos">
 
         <h2>Fundamentos y primer contacto</h2>
 
@@ -35,7 +45,7 @@
 
     </div>
 
-    <div class="circuitos">
+    <div class="circuitos" id="circuitos">
 
         <h2>Circuito de potencia o trabajo</h2>
 
@@ -65,22 +75,88 @@
 
 </div>
 
-<div class="lista">
+<div class="lista" id="componentes">
 
     <h2>Elementos que integran el tablero de comandos</h2>
 
     <ul>
-        <li><a href="#contactor"> Contactores</a></li>
+        <li><a href="#gabinete">Gabinete para panel electrico</a></li>
         <li><a href="#disyuntor">Disyuntor</a></li>
+        <li><a href="#fusible">Fusibles</a></li>
+        <li><a href="#contactor">Contactores</a></li>
         <li><a href="#rele-temporizador">Relé temporizador</a></li>
+        <li><a href="#rele-falta-fase">Relé falta de fase</a></li>
         <li><a href="#botoneras">Botoneras y señalizadores</a></li>
         <li><a href="#conductores">Conductores</a></li>
+        <li><a href="#bornera">Bornes de conexión</a></li>
         <li><a href="#canaletas">canaletas y riel din</a></li>
     </ul>
 
 </div>
 
 <div class="grid-componentes">
+
+    <div class="componente gabinete" id="gabinete">
+
+        <h3 class="toggle">gabinete</h3>
+
+        <div class="contenido">
+
+            <p>
+                Un gabinete para panel eléctrico (también conocido como cuadro, 
+                armario o tablero de distribución) es un contenedor diseñado específicamente 
+                para albergar componentes como interruptores, disjuntores y sistemas de 
+                automatización industrial. Su función principal no es gestionar la electricidad 
+                por sí mismo, sino actuar como una barrera de protección frente a impactos, agua, 
+                polvo y accesos no autorizados.
+            </p>
+
+            <img src="imagenes/gabinete.webp" alt="Gabinete para comandos electricos" width="300">
+        
+        </div>
+    
+    </div>        
+
+    <div class="componente disyuntor" id="disyuntor">
+
+        <h3 class="toggle">Disyuntor</h3>
+
+        <div class="contenido">
+    
+            <p>
+                Un disyuntor (o interruptor magnetotérmico) es un dispositivo de seguridad eléctrica 
+                diseñado para cortar 
+                automáticamente el flujo de corriente ante sobrecargas o cortocircuitos,
+                protegiendo los cables y la instalación de incendios. 
+                A diferencia del interruptor diferencial, que protege 
+                a las personas de fugas, el disyuntor protege la instalación.
+            </p>
+
+            <img src="imagenes/disyuntor.jpg" alt="Disyuntor" width="300">
+
+        </div>
+    
+    </div>
+
+    <div class="componente fusible" id="fusible">
+        
+        <h3 class="toggle">Fusibles</h3>
+        
+        <div class="contenido">
+
+            <p>
+                Un fusible es un componente de seguridad eléctrica diseñado para proteger los
+                circuitos contra sobrecorrientes y cortocircuitos. Su funcionamiento se basa en 
+                un filamento metálico interno que se funde (por efecto Joule) si la corriente eléctrica
+                supera su límite seguro, interrumpiendo el flujo eléctrico por completo para evitar incendios
+                o daños graves en los equipos conectados.
+            </p>
+
+            <img src="imagenes/fusibles.png" alt="Fusibles" width="300">
+        
+        </div>
+    
+    </div>
 
     <div class="componente contactor" id="contactor">
 
@@ -104,27 +180,6 @@
         
     </div>
 
-    <div class="componente disyuntor" id="disyuntor">
-
-        <h3 class="toggle">Disyuntor</h3>
-
-        <div class="contenido">
-    
-            <p>
-                Un disyuntor (o interruptor magnetotérmico) es un dispositivo de seguridad eléctrica 
-                diseñado para cortar 
-                automáticamente el flujo de corriente ante sobrecargas o cortocircuitos,
-                protegiendo los cables y la instalación de incendios. 
-                A diferencia del interruptor diferencial, que protege 
-                a las personas de fugas, el disyuntor protege la instalación.
-            </p>
-
-            <img src="imagenes/disyuntor.jpg" alt="Disyuntor" width="300">
-
-        </div>
-    
-    </div>
-
     <div class="componente rele" id="rele-temporizador">
 
         <h3 class="toggle">Relé temporizador</h3>
@@ -145,6 +200,26 @@
 
     </div>
 
+    <div class="componente rele-falta-fase" id="rele-falta-fase">
+
+        <h3 class="toggle">Relé falta de fase</h3>
+
+        <div class="contenido">
+
+            <p>
+                El relé falta de fase es un dispositivo electrónico de protección diseñado para monitorear 
+                redes eléctricas trifásicas. Su función principal es desactivar inmediatamente el circuito de
+                comando si se interrumpe el suministro de alguna de las fases (L_1, L_2, L_3). 
+                Esto evita que motores de inducción y maquinarias costosas operen de forma bidireccional 
+                o sufran sobrecalentamientos severos que quemen sus bobinados.
+            </p>
+
+            <img src="imagenes/Rele-falta-de-fase.jpg" alt="Relé falta de fase" width="300">
+            
+        </div>
+    
+    </div>
+        
     <div class="componente botoneras" id="botoneras">
 
         <h3 class="toggle">Botoneras y señalizadores</h3>
@@ -186,6 +261,25 @@
   
     </div>
 
+    <div class="componente bornera" id="bornera">
+
+        <h3 class="toggle">bornes de conexión</h3>
+
+        <div class="contenido">
+
+            <p>
+                Los bornes de conexión (o bornas eléctricas) son los elementos metálicos utilizados para 
+                unir cables eléctricos entre sí o conectarlos a un dispositivo de forma segura. 
+                Actúan como puntos de transición que garantizan el flujo óptimo de la corriente
+                eléctrica, eliminando la necesidad de realizar empalmes improvisados con cinta aislante.
+            </p>
+
+            <img src="imagenes/bornes.jpg" alt="Bornes de conexión" width="300">
+        
+        </div>
+    
+    </div>
+
     <div class="componente canaletas" id="canaletas">
 
         <h3 class="toggle">Canaletas y riel din</h3>
@@ -205,7 +299,8 @@
     </div>
 
 </div>
-<footer>
+
+<footer id="footer">
 
     <p>
         Proyecto educativo sobre comandos eléctricos
